@@ -15,8 +15,122 @@ body {
   padding: 0;
   background: #fcf8f2;
 }
-
+img {
+  width: 100%;
+  height: auto;
+}
+.icon {
+  position: absolute;
+  z-index: 5;
+  display: none;
+}
 .container {
-  max-width: 1200px;
+  max-width: 1037px;
   margin: 0 auto;
+}
+.offert {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 0.5rem 1rem;
+  margin: 0.5rem 1rem;
+}
+.offert__item {
+  position: relative;
+}
+.offert__item:nth-of-type(1) {
+  z-index: 3;
+}
+.offert__item:nth-of-type(3) {
+  z-index: 5;
+}
+.offert__item:hover .offert__link {
+  background: #d5014f;
+}
+.offert__item:hover img {
+  box-shadow: 0px 0px 16px -5px rgba(0, 0, 0, 0.75);
+}
+.offert__link {
+  text-decoration: none;
+  cursor: pointer;
+  color: white;
+  background: #b80345;
+  padding: 0.5rem 3.5rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 5;
+  font-size: 1.4rem;
+  transition: background 0.2s ease-in-out;
+}
+.offert__link:hover {
+  box-shadow: 0px 5px 16px -6px rgba(0, 0, 0, 0.3);
+}
+.offert__link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-top: 7px solid rgb(0 0 0 / 0%);
+  border-left: 7px solid rgb(255 255 255);
+  border-bottom: 7px solid rgb(0 0 0 / 0%);
+  right: 23px;
+  top: 0.8rem;
+  transition: transform 0.2s ease-in-out;
+}
+.offert__link:hover::after {
+  transform: translateX(3px);
+}
+.icon-yr_roslina_3min {
+  transform: rotate(-23deg) scale(2.5);
+  left: -34%;
+  bottom: 0;
+  z-index: -1;
+}
+.icon-yr_roslina_2min {
+  right: -38%;
+  top: 85px;
+  z-index: -1;
+  transform: scale(1.2);
+}
+.icon-yr_roslina_4min {
+  transform: rotate(-14deg) scale(1.6);
+  left: -36%;
+  bottom: 10%;
+}
+.icon-yr_krolik_1min {
+  bottom: -50px;
+  right: -107px;
+  display: block;
+}
+@media screen and (min-width: 768px) {
+  html {
+    font-size: 75%;
+  }
+  .offert__link::after {
+    top: 1.1rem;
+  }
+}
+@media screen and (min-width: 991px) {
+  html {
+    font-size: 85%;
+  }
+  .icon-yr_roslina_4min,
+  .icon-yr_roslina_2min {
+    display: block;
+  }
+}
+@media screen and (min-width: 1037px) {
+  html {
+    font-size: 100%;
+  }
+  .offert {
+    margin: 1.5rem 0;
+    grid-gap: 1.5rem 2rem;
+  }
+  .icon-yr_roslina_3min {
+    display: block;
+  }
 }
