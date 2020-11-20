@@ -15,11 +15,37 @@
     <div class="container">
       <main class="main__item">
         <img
-          class="offert__item-img"
           src="./assets/YR2011_MG_15__lp_christmas_desktop_PL_03.png"
           alt=""
         />
-        <form action="./prezent.html"></form>
+        <div class="main__item-filter">
+          <h1>wybierz prezent</h1>
+          <form action="./prezent.html">
+            <div class="filter__container">
+              <label for="gender">Wybierz płeć</label>
+              <select name="gender" id="gender" required>
+                <option value="" hidden>Wybierz płeć...</option>
+                <option value="kobieta">kobieta</option>
+                <option value="mezcyzna">mężczyzna</option>
+              </select>
+              <label for="price">Wybierz cenę</label>
+              <select name="price" id="price" required>
+                <option value="" hidden>Wybierz cenę...</option>
+                <option value="do50">do 50zł</option>
+                <option value="do100">do 100zł</option>
+                <option value=">100">powyżej 100zł</option>
+              </select>
+              <label for="category">Wybierz kategorię</label>
+              <select name="category" id="category" required>
+                <option value="" hidden>Wybierz kategorię...</option>
+                <option value="do50">makijaż</option>
+                <option value="do100">włosy</option>
+                <option value=">100">zapachy</option>
+              </select>
+            </div>
+            <button class="link">Znajdź</button>
+          </form>
+        </div>
       </main>
       <section class="offert">
         <div class="offert__item">
@@ -29,7 +55,7 @@
               src="./assets/YR2011_MG_15__lp_christmas_desktop_PL_12.png"
               alt=""
             />
-            <a class="offert__link" href="/">Odkryj!</a>
+            <a class="link offert__link" href="/">Odkryj!</a>
           </a>
           <svg class="icon icon-yr_roslina_2min">
             <use
@@ -51,7 +77,7 @@
               src="./assets/YR2011_MG_15__lp_christmas_desktop_PL_07.png"
               alt=""
             />
-            <a class="offert__link" href="/">Odkryj!</a>
+            <a class="link offert__link" href="/">Odkryj!</a>
           </a>
           <svg class="icon icon-yr_krolik_1min">
             <use xlink:href="/assets/symbol-defs.svg#icon-yr_krolik_1min"></use>
@@ -65,7 +91,7 @@
               src="./assets/YR2011_MG_15__lp_christmas_desktop_PL_09.png"
               alt=""
             />
-            <a class="offert__link" href="/">Odkryj!</a>
+            <a class="link offert__link" href="/">Odkryj!</a>
           </a>
         </div>
 
@@ -76,7 +102,7 @@
               src="./assets/YR2011_MG_15__lp_christmas_desktop_PL_13.png"
               alt=""
             />
-            <a class="offert__link" href="/">Odkryj!</a>
+            <a class="link offert__link" href="/">Odkryj!</a>
           </a>
           <svg class="icon icon-yr_roslina_4min">
             <use
