@@ -167,6 +167,15 @@ option {
   align-items: center;
   flex-direction: column;
 }
+.animate {
+  animation: animate 1.5s 0.3s ease-in-out forwards;
+}
+
+@keyframes animate {
+  100% {
+    transform: translateX(-45px) scale(0.5);
+  }
+}
 @media screen and (min-width: 480px) {
   .link {
     margin-top: 1.5rem;
@@ -202,6 +211,11 @@ option {
     transform: scale(0.8);
     z-index: 2;
   }
+  @keyframes animate {
+    100% {
+      transform: translateX(-45px) scale(0.8);
+    }
+  }
 }
 @media screen and (min-width: 991px) {
   html {
@@ -233,5 +247,10 @@ option {
     bottom: -46px;
     right: -6rem;
     transform: scale(1);
+  }
+  @keyframes animate {
+    100% {
+      transform: translateX(-45px) scale(1);
+    }
   }
 }
